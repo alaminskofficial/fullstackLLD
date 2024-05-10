@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Example</title>
+</head>
+
+<body>
+    <form method="get" action="/alamin">
+        <label for="first-name">Full Name</label>
+        <input name="firstName" required id="first-name" type="text" />
+        <br />
+        <label for="email">Email</label>
+        <input name="email" placeholder="jhon@example.com" required id="email" type="email" />
+        <br />
+        <label for="age">Age</label>
+        <input name="age" id="age" type="number" />
+        <br />
+        <label for="password">Password</label>
+        <input name="password" id="password" type="password" />
+        <br />
+        <label for="month">Date of Birth</label>
+        <select required name="month" id="month">
+            <option>Select Month</option>
+            <option value="jan">January</option>
+            <option value="feb">Feb</option>
+            <option value="mar">March</option>
+            <option value="apr">Apr</option>
+        </select>
+        <br />
+        <br />
+
+        <label>Agree to t&c</label>
+        <input name="tc" required type="checkbox" />
+        <br />
+        <label>Subscribe to Email</label>
+        <input name="tc" required type="checkbox" />
+
+        <br />
+        <br />
+
+        <label for="male">Male</label>
+        <input id="male" value="m" type="radio" name="gender" />
+        <br />
+
+        <label>Female</label>
+        <input value="f" type="radio" name="gender" />
+        <br />
+
+        <label>Other</label>
+        <input value="o" type="radio" name="gender" />
+
+        <br />
+        <br />
+        <br />
+
+        <button>Sign up</button>
+    </form>
+</body>
+
+</html>
