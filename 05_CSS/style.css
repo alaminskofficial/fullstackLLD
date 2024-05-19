@@ -1,0 +1,16 @@
+.item {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #parent {
+    border: 2px solid black;
+    /* padding: 5px; */
+    border-radius: 5px;
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+  }
