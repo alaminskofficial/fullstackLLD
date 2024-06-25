@@ -8,7 +8,7 @@ const alamin = {
     }
  }
 
- 
+
 // const sk = {...alamin}; // shallow copy using spread operator
 // alamin.studentName = "Sourav"; 
 // alamin.address.city = "Delhi";
@@ -28,5 +28,7 @@ const sk = JSON.parse(JSON.stringify(alamin)); // it's copy the object fully (de
 alamin.studentName = "Sourav"; 
 alamin.address.city = "Delhi"; 
 console.log(sk);
+
+
 
 

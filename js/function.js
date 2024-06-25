@@ -51,3 +51,23 @@ function printArguments(...args) {
   }
   
   printArguments('Hello', 'World', 'and', 'the', 'universe');
+
+  //5.arguments object
+  function sum5() {
+    let sum = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        sum += arguments[i];
+    }
+    return sum;
+}
+console.log(sum5(5, 6, 7, 8, 9, 10));
+
+const b = (...x)=> console.log(x);
+
+b(1,2,3,4,5,6,7,8,9,10);
+
+// high order function & callback function
+// A higher-order function is a function that takes another function as an argument or returns a function as a result.
+//example of higher order function:
+
+
