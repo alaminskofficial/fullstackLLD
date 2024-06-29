@@ -69,5 +69,23 @@ b(1,2,3,4,5,6,7,8,9,10);
 // high order function & callback function
 // A higher-order function is a function that takes another function as an argument or returns a function as a result.
 //example of higher order function:
+function higherOrderFunction(callback) {
+    console.log('From higher order function');
+    callback();
+}
+//example of callback function
+function callbackFunction() {
+    console.log('From callback function');
+}
+higherOrderFunction(callbackFunction);
 
-
+function funA(x , y){
+      console.log("calling x...");
+      x();
+      console.log("calling y...");
+      y();
+}
+function funB(){
+     console.log("I am function B");
+};
+funA(funB,()=> console.log("I am function C"));
