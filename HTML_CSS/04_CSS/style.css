@@ -3,12 +3,16 @@ ul {
   }
   
   @media screen and (min-width: 320px) {
+    nav{
+      background-color: antiquewhite;
+    }
   }
   
   @media screen and (min-width: 641px) {
     nav {
       display: flex;
       justify-content: space-between;
+      background-color: aquamarine;
     }
     ul {
       display: flex;
@@ -20,6 +24,7 @@ ul {
     nav {
         display: flex;
         justify-content: space-between;
+        background-color: aliceblue
       }
       ul {
         display: flex;
