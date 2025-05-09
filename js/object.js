@@ -28,6 +28,7 @@ const sk = JSON.parse(JSON.stringify(alamin)); // it's copy the object fully (de
 alamin.studentName = "Sourav"; 
 alamin.address.city = "Delhi"; 
 console.log(sk);
+console.log(alamin);
 
 
 

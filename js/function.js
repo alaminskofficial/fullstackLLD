@@ -27,12 +27,17 @@ const sum3 = (n) => {
     }
     return sum;
 }
+console.log(sum3(5));
 //4. annonymous function
 // Anonymous functions are functions without a name. They are often not accessible after their initial creation.
 //They can be used as arguments to other functions.
+
 setTimeout(function() {
     console.log("Hello, World after 1 second!");
   }, 1000);
+//   setTimeout(() => {
+//     console.log("Hello, World after 1 second!");
+//   }, 1000);
 
 
 // how i can pass unlimited number of arguments to a function
