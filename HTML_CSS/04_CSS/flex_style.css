@@ -1,0 +1,19 @@
+#container{
+    background-color: aqua;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    /* w.rt. main axis */
+    justify-content: space-around; 
+    /* gap: 15px;  */
+    /* w.rt. cross axis */
+    align-items: center;
+    flex-wrap: wrap;
+}
+.child{
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+    border: 2px solid black;
+}
