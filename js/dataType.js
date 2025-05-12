@@ -14,7 +14,7 @@ const object = {
       "name": "Sk Alamin",
       "age" : 25,
       "email": "alamin@gmail.com",
-      "phone": 6294090242,
+      "phone": "629XXXXXX",
       "address": "India"
 }
 
