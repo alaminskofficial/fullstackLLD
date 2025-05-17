@@ -71,6 +71,9 @@ const b = (...x)=> console.log(x);
 
 b(1,2,3,4,5,6,7,8,9,10);
 
+const IsSquareEven = (x)=>(x*x % 2 === 0)
+console.log(IsSquareEven(5));
+
 // high order function & callback function
 // A higher-order function is a function that takes another function as an argument or returns a function as a result.
 //example of higher order function:
@@ -104,4 +107,4 @@ function funA(x , y){
 function funB(){
    console.log("I am function B");
 };
-funA(funB,(name)=> console.log("My name is : " + name));
+funA(funB,(name)=> console.log("My name is :" + name));
