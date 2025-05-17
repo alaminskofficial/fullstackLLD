@@ -3,11 +3,15 @@
 
 // Takes one or more functions as arguments, or
 // Returns a function as its result.
-// In simpler terms, a high-order function operates on functions, meaning it can receive functions as inputs or output new functions. This concept is powerful in functional programming, where functions are treated as first-class citizens (i.e., they can be passed around like any other data type).
+// In simpler terms, a high-order function operates on functions, meaning it can receive functions as inputs or output new functions. 
+// This concept is powerful in functional programming, where functions are treated as first-class citizens
+//  (i.e., they can be passed around like any other data type).
 
 //---------
 // Callback Function in JavaScript:
-// A callback function is a function that is passed as an argument to another function and is executed after some operation or event occurs. Callback functions are widely used in JavaScript, especially for asynchronous operations, such as handling user interactions or API responses.
+// A callback function is a function that is passed as an argument to another function 
+// and is executed after some operation or event occurs. Callback functions are widely used in JavaScript, 
+// especially for asynchronous operations, such as handling user interactions or API responses.
 
 //eg: generate a otp and send it to the user
 function generateOTP(){

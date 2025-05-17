@@ -94,3 +94,14 @@ function funB(){
      console.log("I am function B");
 };
 funA(funB,()=> console.log("I am function C"));
+
+function funA(x , y){
+    console.log("calling x...");
+    x();
+    console.log("calling y...");
+    y('alamin');
+}
+function funB(){
+   console.log("I am function B");
+};
+funA(funB,(name)=> console.log("My name is : " + name));
