@@ -6,6 +6,7 @@ const messageDisplay = document.getElementById('message');
 let score = 0;
 let correctIndex = -1;
 let firstClick = true;
+let noOfOptions = 6;
 
 function getRandomColor() {
   const r = Math.floor(Math.random() * 256);
@@ -18,12 +19,11 @@ function generateGame() {
   grid.innerHTML = '';
   messageDisplay.textContent = '';
   firstClick = true;
-
   const colors = [];
   correctIndex = Math.floor(Math.random() * 6);
   const correctColor = getRandomColor();
 
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < noOfOptions; i++) {
     colors.push(i === correctIndex ? correctColor : getRandomColor());
   }
 
@@ -54,3 +54,17 @@ function handleGuess(index) {
 
 // Start game
 generateGame();
+
+//using keypress 
+document.addEventListener("keypress" ,(event) =>{
+    const key = event.key;
+    const keyAsNum = parseInt(key);
+    if(isNaN(keyAsNum)) return;
+    if(keyAsNum > noOfOptions || keyAsNum <= 0) return;
+    console.log(keyAsNum);
+    const el = document.querySelector(`#grid :nth-child(${keyAsNum})`);
+    if(el){ 
+        el.click()
+        console.log(el);
+    };
+})
