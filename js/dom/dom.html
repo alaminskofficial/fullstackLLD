@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        button{
+            border: 1.5px solid black;
+            padding:  10px 20px;
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="myDiv">
+        <button id="btn1" class = 'btn-class'>Click Here</button>
+        <!-- <button id="btn2" class='btn-class'>Duplicate Btn</button> -->
+    </div>
+    <script>
+         const myButton = document.getElementById('btn1');
+         const myDiv = document.getElementById('myDiv');
+        // myButton.onclick = () => myButton.style.backgroundColor = 'red'
+        // console.log(myButton);
+        // const buttons = document.getElementsByClassName('btn-class')
+        // const len = buttons.length
+        // for(let i = 0 ; i<len ; i++){
+        //     const el = buttons.item(i)
+        //     console.log(el);
+        // }
+
+        // const button = document.getElementsByTagName('button')
+        // console.log(button);
+        // query selector
+        // const els = document.querySelectorAll('.btn-class')
+        // console.log(els);
+        // const el = document.querySelector('button#btn1');
+        // console.log(el);
+        // const el2 = document.querySelector('#btn2');
+        // console.log(el2);
+        // myButton.addEventListener('click',()=> console.log('task 1: sk alamin'))
+
+        // myButton.addEventListener('mouseenter' ,(e)=> {
+        //     console.log(e)
+        //     console.log('mouse enter')
+        // })
+        // myButton.addEventListener('mouseleave' ,()=> console.log('mouse leave'))
+    //    if(myButton){
+    //     myButton.addEventListener('click',() =>{
+    //         if(!myDiv) return alert('Div element not found ')
+    //         //create html element
+    //         // appendChild , innerText , innerHtml
+    //         const e = document.createElement('h5')
+    //         const text = prompt('Enter your Value')
+    //         e.innerText = text
+    //         console.log(e);
+    //         myDiv.appendChild(e);
+
+    //     })
+    //   }
+
+    //get attribute and set attribute 
+    myButton.setAttribute('name', 'Sk Alamin');
+    console.log(myDiv.getAttribute('id'));
+
+       
+
+    </script>
+    
+</body>
+</html>
