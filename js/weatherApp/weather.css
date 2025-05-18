@@ -2,9 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(to top right, #74ebd5, #acb6e5);
     display: flex;
@@ -13,14 +13,14 @@
     height: 100vh;
     padding: 20px;
     color: #222;
-  }
-  
-  .container {
+}
+
+.container {
     max-width: 400px;
     width: 100%;
-  }
-  
-  .card {
+}
+
+.card {
     background: #ffffff;
     border-radius: 16px;
     padding: 24px;
@@ -28,51 +28,108 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-  }
-  
-  .header {
+}
+
+.header {
     display: flex;
     align-items: center;
     gap: 12px;
     justify-content: center;
-  }
-  
-  #weather-icon {
+}
+
+.user-options-inline {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+#auto-location-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     background-color: #6b7681; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#auto-location-btn:hover {
+    background-color: #6f99d0;
+}
+
+#search-btn {
+    white-space: nowrap;
+    padding: 10px 14px;
+    background-color: #72a6e1;
+    color: #ffffff;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+}
+
+#auto-location-btn:hover,
+#search-btn:hover {
+    background-color: #357bd8;
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+#weather-icon {
     width: 48px;
     height: 48px;
-  }
-  
-  .location-info {
+}
+
+.location-info {
     text-align: center;
-  }
-  
-  .location-info h2 {
+}
+
+.location-info h2 {
     font-size: 22px;
-  }
-  
-  .main-info {
-    background-color: #829fbd; /* dark grey-blue */
-    color: #ecf0f1; /* light text for contrast */
+}
+
+.main-info {
+    background-color: #829fbd;
+    color: #ecf0f1;
     border-radius: 16px;
     padding: 16px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
-  }
-  .main-info h3 {
+}
+
+.main-info h3 {
     font-size: 18px;
     margin-bottom: 10px;
     color: #ecf0f1;
-  }
-  .temp-info .temp {
+}
+
+.temp-info .temp {
     font-size: 36px;
     font-weight: bold;
     color: #ffffff;
-  }
+}
 
-  #condition {
-    background-color: #34495e;      
-    color: #ecf0f1;                  
+#condition {
+    background-color: #34495e;
+    color: #ecf0f1;
     padding: 8px 16px;
     border-radius: 20px;
     display: inline-block;
@@ -80,30 +137,29 @@
     font-weight: 500;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     margin-bottom: 12px;
-  }
-  
-  .feels-like {
+}
+
+.feels-like {
     font-size: 14px;
     color: #d5e3ec;
-  }
-  
-  .details,
-  .air-quality {
+}
+
+.details,
+.air-quality {
     background: #f8f9fa;
     border-radius: 12px;
     padding: 12px 16px;
     font-size: 14px;
     line-height: 1.8;
-  }
-  
-  .details div,
-  .air-quality div {
+}
+
+.details div,
+.air-quality div {
     display: flex;
     justify-content: space-between;
-  }
-  
-  .air-quality h4 {
+}
+
+.air-quality h4 {
     margin-bottom: 8px;
     color: #333;
-  }
-  
+}
