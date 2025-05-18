@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="weather.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="header">
+        <img id="weather-icon" src="" alt="Weather Icon" />
+        <h1>Weather App</h1>
+      </div>
+
+      <div class="location-info">
+        <h2 id="location-name">--</h2>
+        <p id="local-time">--</p>
+      </div>
+
+      <div class="main-info">
+        <h3 id="condition">--</h3>
+        <div class="temp-info">
+          <p class="temp" id="temperature">--°C</p>
+          <p class="feels-like"><span id="feelslike">--°C</span></p>
+        </div>
+      </div>
+
+      <div class="details">
+        <div><strong>Humidity:</strong> <span id="humidity">--%</span></div>
+        <div><strong>Wind:</strong> <span id="wind">-- km/h</span></div>
+        <div><strong>UV Index:</strong> <span id="uv">--</span></div>
+        <div><strong>Visibility:</strong> <span id="visibility">-- km</span></div>
+      </div>
+
+      <div class="air-quality">
+        <h4>Air Quality</h4>
+        <div><strong>CO:</strong> <span id="co">--</span></div>
+        <div><strong>NO₂:</strong> <span id="no2">--</span></div>
+        <div><strong>O₃:</strong> <span id="o3">--</span></div>
+        <div><strong>PM2.5:</strong> <span id="pm25">--</span></div>
+        <div><strong>PM10:</strong> <span id="pm10">--</span></div>
+      </div>
+    </div>
+  </div>
+  <script src="weather.js"></script>
+</body>
+</html>
