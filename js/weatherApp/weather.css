@@ -51,27 +51,40 @@
   }
   
   .main-info {
+    background-color: #829fbd; /* dark grey-blue */
+    color: #ecf0f1; /* light text for contrast */
+    border-radius: 16px;
+    padding: 16px;
     text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
   }
-  
-  #condition {
+  .main-info h3 {
     font-size: 18px;
-    color: #555;
+    margin-bottom: 10px;
+    color: #ecf0f1;
   }
-  
-  .temp-info {
-    margin-top: 8px;
-  }
-  
-  .temp {
-    font-size: 40px;
+  .temp-info .temp {
+    font-size: 36px;
     font-weight: bold;
-    color: #222;
+    color: #ffffff;
+  }
+
+  #condition {
+    background-color: #34495e;      
+    color: #ecf0f1;                  
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    margin-bottom: 12px;
   }
   
   .feels-like {
     font-size: 14px;
-    color: #666;
+    color: #d5e3ec;
   }
   
   .details,
