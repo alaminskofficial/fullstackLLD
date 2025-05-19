@@ -9,35 +9,38 @@
 </head>
 
 <body>
-    <div class="input-container">
-        <input placeholder="Type Your Task" id="task-input"/>
-        <button id="task-button">Add</button>
+    <div class="kanban-wrapper">
+        <h1 class="h1-text">📋 Project Board</h1>
+          
+        <div class="input-container">
+            <input placeholder="Type Your Task" id="task-input" />
+            <button id="task-button">Add</button>
+        </div>
+        <div class="board-container">
+            <!-- Add/delete tasks dynamically in every board?
+            add board dynamically
+            Save tasks to localStorage? -->
+            
+            <div id="todo-board" class="board">
+                <h3>Todo</h3>
+                <p class="task" draggable="true">Task1</p>
+                <p class="task" draggable="true">Task2</p>
+                <p class="task" draggable="true">Task3</p>
+
+            </div>
+            <div id="progress-board" class="board">
+                <h3>Progress</h3>
+                <p class="task" draggable="true">Task4</p>
+                <p class="task" draggable="true">Task5</p>
+                <p class="task" draggable="true">Task6</p>
+
+            </div>
+            <div id="done-board" class="board">
+                <h3>Done</h3>
+                <p class="task" draggable="true">Task7</p>
+            </div>
+        </div>
     </div>
-    <div class="board-container">
-        <div id="todo-board" class="board">
-            <h3>Todo</h3>
-            <p class="task" draggable="true">Task1</p>
-            <p class="task" draggable="true">Task2</p>
-            <p class="task" draggable="true">Task3</p>
-
-        </div>
-        <div id="progress-board" class="board">
-            <h3>Progress</h3>
-            <p class="task" draggable="true">Task4</p>
-            <p class="task" draggable="true">Task5</p>
-            <p class="task" draggable="true">Task6</p>
-
-        </div>
-        <div id="done-board" class="board">
-            <h3>Done</h3>
-            <p class="task" draggable="true">Task7</p>
-
-
-        </div>
-
-    </div>
-
-
 
     <script src="util.js"></script>
     <script src="task.js"></script>
