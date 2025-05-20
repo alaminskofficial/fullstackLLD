@@ -10,9 +10,9 @@ function saveToLocalStorage() {
 
   function loadFromLocalStorage() {
     const defaultBoards = [
-        { title: "Todo", tasks: ["delete tasks ", "Misc tasks"] },
-        { title: "In Progress", tasks: ["closestElement logic"] },
-        { title: "Done", tasks: ["Add Task w.r.t board", "saved in local storage" ,"add board dynamically"] }
+        { title: "Todo", tasks: ["Misc tasks 1"] },
+        { title: "In Progress", tasks: ["Misc tasks 2"] },
+        { title: "Done", tasks: ["Add , Delete Task w.r.t board", "saved in local storage" ,"add ,delete board dynamically"] }
       ];
     const data = JSON.parse(localStorage.getItem("kanbanBoards")) || defaultBoards;
     data.forEach(board => createBoard(board.title, board.tasks));

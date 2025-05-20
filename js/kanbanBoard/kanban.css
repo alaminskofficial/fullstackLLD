@@ -133,10 +133,29 @@
   }
   
   .is-dragging {
-    background-color: #1f6feb;
+    background-color: #39547c;
     color: #ffffff;
-    border-color: #1f6feb;
+    border-color: #0b121c;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  }
+  .task-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+  
+  .remove-task-button,
+  .remove-board-button {
+    background: none;
+    border: none;
+    color: #da3633;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .remove-board-button{
+    text-align: end;
   }
   
   

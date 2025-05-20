@@ -6,18 +6,29 @@ function attachBoardListeners(board) {
     taskButton.addEventListener("click", () => {
         const value = taskInput.value.trim();
         if (value) {
+            const wrapper = document.createElement("div");
+            wrapper.className = "task-wrapper";
             const task = document.createElement("p");
             task.className = "task";
             task.setAttribute("draggable", "true");
             task.innerText = value;
+            const removeBtn = document.createElement("button");
+            removeBtn.className = "remove-task-button";
+            removeBtn.innerText = "x";
+            removeBtn.addEventListener("click", () => {
+                wrapper.remove();
+                saveToLocalStorage();
+            });
             attachDragListener(task);
-            taskContainer.appendChild(task);
+            wrapper.appendChild(task);
+            wrapper.appendChild(removeBtn);
+            taskContainer.appendChild(wrapper);
             taskInput.value = "";
             saveToLocalStorage();
         }
     });
 
-    taskContainer.querySelectorAll(".task").forEach(task => attachDragListener(task));
+    taskContainer.querySelectorAll(".task-wrapper").forEach(task => attachDragListener(task));
 
     board.addEventListener("dragover", (e) => {
         e.preventDefault();
@@ -28,6 +39,18 @@ function attachBoardListeners(board) {
         } else {
             taskContainer.appendChild(task);
         }
+    });
+    // Remove board button
+    board.querySelector(".remove-board-button").addEventListener("click", () => {
+        board.remove();
+        saveToLocalStorage();
+    });
+    // Remove individual task buttons
+    board.querySelectorAll(".remove-task-button").forEach(button => {
+        button.addEventListener("click", (e) => {
+            e.target.closest(".task-wrapper").remove();
+            saveToLocalStorage();
+        });
     });
 }
 
