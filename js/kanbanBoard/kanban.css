@@ -32,6 +32,20 @@
     width: fit-content; /* Shrinks to fit horizontal content */
     height: auto;        /* Grows vertically based on children */
     max-width: 100%;
+    position: relative;
+  }
+  
+  
+  .add-board-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    background-color: #85a7cb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
   
   
@@ -41,20 +55,21 @@
     justify-content: flex-start;
   }
   
-  #task-input {
+  .task-input {
     flex: 1;
     max-width: 400px;
-    padding: 10px 15px;
-    border-radius: 6px;
-    font-size: 16px;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 12px;
     border: 1px solid #30363d;
     background-color: #161b22;
     color: #c9d1d9;
   }
   
-  #task-button {
-    padding: 10px 16px;
-    font-size: 16px;
+  .task-button,
+  .add-board-button {
+    padding: 8px 10px;
+    font-size: 10px;
     background-color: #238636;
     color: white;
     border: none;
@@ -63,12 +78,15 @@
     transition: background-color 0.2s ease;
   }
   
-  #task-button:hover {
+  .task-button:hover ,
+  .add-board-button {
     background-color: #2ea043;
   }
   
   .board-container {
     display: flex;
+    justify-content: center;   
+    flex-wrap: wrap;  
     gap: 16px;
     overflow-x: auto;
     padding-bottom: 10px;
@@ -77,12 +95,16 @@
   .board {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     background-color: #161b22;
     border: 1px solid #30363d;
     border-radius: 8px;
     padding: 12px;
     width: 300px;
     height: auto;
+  }
+  .input-container {
+    margin-top: auto; 
   }
   
   .board h3 {

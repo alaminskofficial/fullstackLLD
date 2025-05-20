@@ -1,25 +1,54 @@
-const tasks = document.querySelectorAll(".task");
-const boards = document.querySelectorAll(".board");
+function attachBoardListeners(board) {
+    const taskInput = board.querySelector(".task-input");
+    const addButton = board.querySelector(".task-button");
+    const taskContainer = board.querySelector(".tasks-container");
 
-tasks.forEach((task) => attachDragListner(task));
+    addButton.addEventListener("click", () => {
+      const value = taskInput.value.trim();
+      if (value) {
+        const task = document.createElement("p");
+        task.className = "task";
+        task.setAttribute("draggable", "true");
+        task.innerText = value;
+        attachDragListener(task);
+        taskContainer.appendChild(task);
+        taskInput.value = "";
+        saveToLocalStorage();
+      }
+    });
+  
+    taskContainer.querySelectorAll(".task").forEach(task => attachDragListener(task));
 
-boards.forEach((board) => {
-  board.addEventListener("dragover", (e) => {
-    const task = document.querySelector(".is-dragging");
+    board.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      const task = document.querySelector(".is-dragging");
+      //closest ele logic will add
+      if (task) taskContainer.appendChild(task);
+    });
+  }
 
-    const closestElement = getTheClosestElement(board, e.clientY);
+// const tasks = document.querySelectorAll(".task");
+// const boards = document.querySelectorAll(".board");
 
-    if (closestElement) {
-      board.insertBefore(task, closestElement);
-    } else {
-      // Add at the end
-      board.appendChild(task);
-    }
-  });
-});
+// tasks.forEach((task) => attachDragListner(task));
+
+// boards.forEach((board) => {
+//   board.addEventListener("dragover", (e) => {
+//     const task = document.querySelector(".is-dragging");
+
+//     const closestElement = getTheClosestElement(board, e.clientY);
+
+//     if (closestElement) {
+//       board.insertBefore(task, closestElement);
+//     } else {
+//       // Add at the end
+//       board.appendChild(task);
+//     }
+//   });
+// });
 
 const getTheClosestElement = (board, yAxis) => {
-  const tasksInThisBoard = board.querySelectorAll(".task:not(.is-dragging)");
+  const tasksInThisBoard = board.querySelectorAll(".task:not(.is-dragging):not(.input-container)");
 
   let closestElement = null;
   let closestDistance = Number.NEGATIVE_INFINITY;

@@ -1,14 +1,9 @@
-function attachDragListner(taskEl) {
-    if (!taskEl) return;
-  
-    // Listen to Drag Start Events
-    taskEl.addEventListener("dragstart", (e) => {
-      taskEl.classList.add("is-dragging");
-    });
-  
-    //   Listen to Drag End Events
-    taskEl.addEventListener("dragend", (e) => {
-      taskEl.classList.remove("is-dragging");
+  function attachDragListener(task) {
+    if(!task) return;
+    task.addEventListener("dragstart", () => task.classList.add("is-dragging"));
+    task.addEventListener("dragend", () => {
+      task.classList.remove("is-dragging");
+      saveToLocalStorage();//it helps to save the data in local storage when dragend
     });
   }
   
