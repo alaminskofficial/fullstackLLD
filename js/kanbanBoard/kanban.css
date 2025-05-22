@@ -157,5 +157,14 @@
   .remove-board-button{
     text-align: end;
   }
+  .footer {
+    text-align: center;
+    padding: 10px;
+    background-color:  #0d1117;
+    color: #c9d1d9;
+    font-size: 14px;
+    margin-top: auto;
+
+  }
   
   
