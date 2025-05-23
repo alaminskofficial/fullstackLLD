@@ -31,22 +31,6 @@ header {
     color: white;
 }
 
-.tabs {
-    display: flex;
-    background: var(--label-bg);
-}
-
-.tab {
-    padding: 10px;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-}
-
-.tab.active {
-    border-bottom: 2px solid #007bff;
-    font-weight: bold;
-}
-
 .editor-wrapper {
     display: flex;
     flex: 1;
@@ -106,7 +90,8 @@ iframe {
 }
 .footer {
     text-align: center;
-    background-color: #f1f1f1;
+    background-color: var(--bg-color);
+    border: 0.5px solid #ccc;
 }
 .html-icon {
     color: #e34c26; 
@@ -122,5 +107,5 @@ iframe {
 .html-icon,
 .css-icon,
 .js-icon {
-    margin-right: 8px; 
+    margin: 8px; 
 }

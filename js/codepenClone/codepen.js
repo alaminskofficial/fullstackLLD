@@ -1,19 +1,8 @@
-const tabs = document.querySelectorAll(".tab");
 const containers = document.querySelectorAll(".editor-container");
 const htmlEditor = document.getElementById("htmlEditor");
 const cssEditor = document.getElementById("cssEditor");
 const jsEditor = document.getElementById("jsEditor");
 const preview = document.getElementById("preview");
-
-tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-        tabs.forEach(t => t.classList.remove("active"));
-        containers.forEach(c => c.classList.remove("active"));
-
-        tab.classList.add("active");
-        document.getElementById(tab.dataset.tab).classList.add("active");
-    });
-});
 
 function updatePreview() {
     const html = htmlEditor.value;
