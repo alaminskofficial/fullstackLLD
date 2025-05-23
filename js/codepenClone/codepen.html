@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePen Clone</title>
+    <link rel="stylesheet" href="codepen.css">
+</head>
+
+<body data-theme="light">
+    <header>
+        <h3>Your CodePen 🌟</h3>
+        <div>
+            <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme 🌗</button>
+            <button class="layout-toggle" onclick="toggleLayout()">Toggle Layout 📐</button>
+            <button class="save-btn" onclick="saveCode()">Save 💾</button>
+            <button class="download-btn" onclick="downloadCode()">Download ⬇️</button>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="editor-wrapper flex-column" id="editorWrapper">
+            <div class="editor-container active" id="html">
+                <label>HTML</label>
+                <textarea id="htmlEditor" placeholder="Type HTML..."></textarea>
+            </div>
+            <div class="editor-container" id="css">
+                <label>CSS</label>
+                <textarea id="cssEditor" placeholder="Type CSS..."></textarea>
+            </div>
+            <div class="editor-container" id="js">
+                <label>JS</label>
+                <textarea id="jsEditor" placeholder="Type JavaScript..."></textarea>
+            </div>
+        </div>
+        <iframe id="preview"></iframe>
+    </div>
+    <div class="footer">
+        <p>Powered by Sk Alamin</p>
+    </div>
+
+    <script src="codepen.js"></script>
+
+</body>
+
+</html>
