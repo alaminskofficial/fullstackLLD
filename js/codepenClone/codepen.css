@@ -40,10 +40,6 @@ header {
     flex-direction: column;
 }
 
-.layout-row {
-    flex-direction: row;
-}
-
 .layout-grid {
     flex-wrap: wrap;
 }

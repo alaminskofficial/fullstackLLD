@@ -22,7 +22,7 @@ function toggleTheme() {
     body.setAttribute("data-theme", current === "light" ? "dark" : "light");
 }
 
-let layoutModes = ["layout-column", "layout-row", "layout-grid"];
+let layoutModes = ["layout-column", "layout-row"];
 let currentLayout = 0;
 
 function toggleLayout() {
