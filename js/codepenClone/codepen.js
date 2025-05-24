@@ -11,10 +11,31 @@ function updatePreview() {
     const content = html + css + js;
     preview.srcdoc = content;
 }
+//debouce and throtting implement 
+//https://www.telerik.com/blogs/debouncing-and-throttling-in-javascript
+
+function debounce(func, delay) {
+    let timeout;
+    return function(...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), delay);
+    };
+}
+
+// Debounced version of updatePreview
+const debouncedUpdatePreview = debounce(updatePreview, 3000);
+
 
 htmlEditor.addEventListener("input", updatePreview);
 cssEditor.addEventListener("input", updatePreview);
-jsEditor.addEventListener("input", updatePreview);
+
+// Attach debounced updatePreview to input events for js only 
+jsEditor.addEventListener("input", debouncedUpdatePreview);
+
+
+// htmlEditor.addEventListener("input", updatePreview);
+// cssEditor.addEventListener("input", updatePreview);
+// jsEditor.addEventListener("input", updatePreview);
 
 function toggleTheme() {
     const body = document.body;
