@@ -66,6 +66,39 @@ function loadCode() {
     jsEditor.value = localStorage.getItem("js") || "";
     updatePreview();
 }
+// throttleFunction 
+
+//designed to execute the provided function (func) after a specified delay, but it does not execute the function immediately
+
+// function throttleFunction(func, delay) {
+//     let timerId;
+//     return function(...args) {
+//         if (timerId) {
+//             return;
+//         }
+//         timerId = setTimeout(() => {
+//             func.apply(this, args); //designed to execute the provided function (func) after a specified delay,
+//             timerId = undefined; // Reset timerId after delay
+//         }, delay);
+//     };
+// }
+
+//designed to execute the provided function (func) after a specified delay
+
+function throttleFunction(func, delay) {
+    let lastCall = 0;
+    return function(...args) {
+        const now = Date.now();
+        if (now - lastCall >= delay) {
+            lastCall = now;
+            func.apply(this, args);// Execute the function immediately
+        }
+    };
+}
+
+const throttledDownloadCode = throttleFunction(downloadCode, 10000);
+//document.querySelector(".download-btn").addEventListener("click", throttledDownloadCode);
+
 
 function downloadCode() {
     const html = htmlEditor.value;
