@@ -26,7 +26,7 @@ class Animal{
     }
     
 }
-class Lion extends Animal{
+class Lion extends Animal{ //inheritance
     constructor(color ,name , age , height){
         super(name , age , height);
         this.color = color;
