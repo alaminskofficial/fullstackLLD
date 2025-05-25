@@ -51,10 +51,10 @@ newLion.name = "updated my lion";// Use assignment to set the name(setter method
 console.log(newLion.toObject()); // Use the toObject method to print the whole object
 
 // Example of call
-function describe() {
-    console.log(`This is a ${this.color} lion named ${this.name}.`);
+function describe(whatIsDoing) {
+    console.log(`This is a ${this.color} lion named ${this.name} ,  ${whatIsDoing}.`);
 }
-describe.call(newLion); // Using call to invoke describe with newLion as this
+describe.call(newLion , 'just roaming...'); // Using call to invoke describe with newLion as this
 
 // Example of apply
 function describeKingStatus(whatIsDoing , withWhom) {
@@ -70,7 +70,7 @@ updateDetails.apply(newLion, ["Majestic Lion", "Golden"]); // Using apply to upd
 console.log(newLion.toObject());
 
 // Example of bind
-const boundDescribe = describe.bind(newLion); // Using bind to create a new function with newLion as this
+const boundDescribe = describe.bind(newLion , 'roaming with his wife'); // Using bind to create a new function with newLion as this
 boundDescribe(); // Invoking the bound function
 
 //console.log(Lion.prototype);
