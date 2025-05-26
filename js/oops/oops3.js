@@ -20,7 +20,7 @@ class Animal{
     }
     // Method to create a shallow copy
     shallowCopy() {
-        return Object.assign(Object.create(Object.getPrototypeOf(this)), this);
+        return Object.assign({}, this);
     }
 
     // Method to create a deep copy
