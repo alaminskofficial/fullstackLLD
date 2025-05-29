@@ -26,11 +26,20 @@ const arr = [1,2,3];
 console.log(typeof arr);
 console.log(Array.isArray(arr));
 
-let eval = 12/0;
-console.log(eval);//infinity
-console.log(typeof eval);
+// let eval = 12/0;
+// console.log(eval);//infinity
+// console.log(typeof eval);
 //NaN-not a number
-console.log(typeof NaN)
+const eval2 = 1 * "sk";
+console.log(eval2); //NaN
+console.log(isNaN(eval2)); //true
+console.log(typeof eval2); //number
+
+console.log(typeof null);//object
+console.log(isNaN(null));//false
+console.log(typeof undefined);//undefined
+console.log(isNaN(undefined));//true
+
 
 
 
