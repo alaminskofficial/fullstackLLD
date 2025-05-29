@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "jsdom": "^26.1.0",
     "prompt-sync": "^4.2.0"
   }
 }

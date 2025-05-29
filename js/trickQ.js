@@ -14,17 +14,26 @@ console.log(typeof v);
 let v1 = "12" - "1";
 console.log(v1);
 console.log(typeof v1);
-console.log("12" == 12)
-console.log("12" === 12)
-const arr = [1,2,3];
-console.log(typeof arr);
-console.log(Array.isArray(arr));
-
 // diffrence between == and ===
 // == checks for value equality
 // === checks for value and type equality
 // == converts the types of the operands and then compares them
 // === does not convert the types of the operands and then compares them
 // == is not recommended to use
+console.log("12" == 12)
+console.log("12" === 12)
+const arr = [1,2,3];
+console.log(typeof arr);
+console.log(Array.isArray(arr));
+
+let eval = 12/0;
+console.log(eval);//infinity
+console.log(typeof eval);
+//NaN-not a number
+console.log(typeof NaN)
+
+
+
+
 
 
