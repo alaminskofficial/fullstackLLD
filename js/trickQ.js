@@ -16,6 +16,10 @@ console.log(v1);
 console.log(typeof v1);
 console.log("12" == 12)
 console.log("12" === 12)
+const arr = [1,2,3];
+console.log(typeof arr);
+console.log(Array.isArray(arr));
+
 // diffrence between == and ===
 // == checks for value equality
 // === checks for value and type equality
