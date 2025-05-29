@@ -8,7 +8,7 @@ const promises = [
     rejectAfter(7),
     rejectAfter(2)
 ]
-
+//https://dev.to/dance2die/promise-race-vs-promise-any-and-promise-all-vs-promise-allsettled-26if
 // Promise.all : returned promise resolves when all of the input promises have resolved,
 //  or it rejects as soon as one of the input promises rejects 
 Promise.all(promises)  
