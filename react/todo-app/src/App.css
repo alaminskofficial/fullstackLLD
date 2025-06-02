@@ -113,4 +113,10 @@ span {
 .delete-btn:hover {
   color: #cc0000;
 }
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  color: #666;
+  font-size: 0.9em;
+}
 

@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
    // Initialize state variable 'todos' with a default value of []
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState([{ id : Date.now() , text: 'Todo app designn', completed: true },{ id : Date.now() , text: 'todo app coding done', completed: true },{ id : Date.now() , text: 'deploy and testing', completed: false }]);
   const [inputValue, setInputValue] = useState('');
 
   //inputRef is commonly used to directly interact with or modify DOM elements
@@ -57,6 +57,7 @@ function App() {
           </li>
         ))}
       </ul>
+      <footer className="footer">Powered by Sk Alamin</footer>
     </div>
   );
 }
