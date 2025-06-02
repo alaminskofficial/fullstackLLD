@@ -2,16 +2,22 @@ import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import './App.css';
 
 function App() {
+   // Initialize state variable 'todos' with a default value of []
   const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState('');
+
+  //inputRef is commonly used to directly interact with or modify DOM elements
   const inputRef = useRef(null);
 
+// useEffect to focus the input field on component mount
   useEffect(() => {
     inputRef.current.focus();
   }, []);
 
+// useCallback to memoize the addTodo function
   const addTodo = useCallback(() => {
     if (inputValue.trim()) {
+      {/* Update state using setTodos function */}
       setTodos([...todos, { id : Date.now() , text: inputValue, completed: false }]);
       setInputValue('');
     }
@@ -25,6 +31,7 @@ function App() {
     setTodos(todos.map((todo, i) => i === index ? { ...todo, completed: !todo.completed } : todo));
   }, [todos]);
 
+// useMemo to compute the number of todos
   const todoCount = useMemo(() => todos.length, [todos]);
 
   return (
