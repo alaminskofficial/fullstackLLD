@@ -1,10 +1,11 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Catalog from "../pages/Catalog";
+
 import Home from "../pages/Home";
+import Catalog from "../pages/Catalog";
 import Detail from "../pages/detail/Detail";
 
-import * as Config from "../constants/config";
+import * as Config from "../constants/Config";
 
 const Routes = () => {
   return (

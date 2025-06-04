@@ -10,7 +10,7 @@ import tmdbApi, { category, movieType, tvType } from "../../api/tmdbApi";
 import Button, { OutlineButton } from "../button/Button";
 import Input from "../input/Input";
 
-import * as Config from "./../../constants/config";
+import * as Config from "./../../constants/Config";
 
 const MovieGrid = (props) => {
   const [items, setItems] = useState([]);
@@ -41,10 +41,8 @@ const MovieGrid = (props) => {
         };
         response = await tmdbApi.search(props.category, { params });
       }
-      if (response && response.results) {
-        setItems(response.results);
-        setTotalPage(response.total_pages || 0);
-      }
+      setItems(response.results);
+      setTotalPage(response.total_pages);
     };
     getList();
   }, [keyword, props.category]);
@@ -72,10 +70,8 @@ const MovieGrid = (props) => {
       };
       response = await tmdbApi.search(props.category, { params });
     }
-    if (response && response.results) {
-      setItems([...items, ...response.results]);
-      setPage(page + 1);
-    }
+    setItems([...items, ...response.results]);
+    setPage(page + 1);
   };
 
   return (

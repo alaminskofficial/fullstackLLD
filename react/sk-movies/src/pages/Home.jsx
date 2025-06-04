@@ -2,17 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import { OutlineButton } from "../components/button/Button";
-import SlideFeature from "../components/slide-feature/SlideFeature";
+import HeroSlide from "../components/hero-slide/HeroSlide";
 import MovieList from "../components/movie-list/MovieList";
 
 import { category, movieType, tvType } from "../api/tmdbApi";
 
-import * as Config from "./../constants/config";
+import * as Config from "./../constants/Config";
 
 const Home = () => {
   return (
     <>
-      <SlideFeature />
+      <HeroSlide />
 
       <div className="container">
         <div className="section mb-3">

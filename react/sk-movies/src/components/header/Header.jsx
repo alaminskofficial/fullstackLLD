@@ -3,9 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 
 import "./header.scss";
 
-import logo from "./../../assets/skmovies.png";
+import logo from "./../../assets/logo.png";
 
-import * as Config from "./../../constants/config";
+import * as Config from "./../../constants/Config";
 
 const headerNav = [
   {

@@ -1,8 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import "swiper/swiper-bundle.css";
+
 import SwiperCore, { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 
 import Button, { OutlineButton } from "./../button/Button";
 import Modal, { ModalContent } from "./../modal/Modal";
@@ -10,12 +9,12 @@ import Modal, { ModalContent } from "./../modal/Modal";
 import tmdbApi, { category, movieType } from "./../../api/tmdbApi";
 import apiConfig from "./../../api/apiConfig";
 
-import "./slide-feature.scss";
+import "./hero-slide.scss";
 import { useHistory } from "react-router";
 
-import * as Config from "./../../constants/config";
+import * as Config from "./../../constants/Config";
 
-const SlideFeature = () => {
+const HeroSlide = () => {
   SwiperCore.use([Autoplay]);
 
   const [movieItems, setMovieItems] = useState([]);
@@ -37,7 +36,7 @@ const SlideFeature = () => {
   }, []);
 
   return (
-    <div className="slide-feature">
+    <div className="hero-slide">
       <Swiper
         modules={[Autoplay]}
         grabCursor={true}
@@ -142,4 +141,4 @@ const TrailerModal = (props) => {
   );
 };
 
-export default SlideFeature;
+export default HeroSlide;

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 
 import "./movie-list.scss";
-import "swiper/swiper-bundle.css"; 
 
 import { SwiperSlide, Swiper } from "swiper/react";
 
@@ -29,7 +28,6 @@ const MovieList = (props) => {
       } else {
         response = await tmdbApi.similar(props.category, props.id);
       }
-      //console.log(response);
       setItems(response.results);
     };
     getList();

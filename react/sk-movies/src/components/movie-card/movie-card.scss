@@ -1,51 +1,42 @@
 @use "../../scss/" as *;
 
-.modal {
-  @include flex(center, center);
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  overflow: auto;
-  background-color: rgba($color: $black, $alpha: 0.4);
-  opacity: 0;
-  visibility: hidden;
+.movie-card {
+  position: relative;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 160%;
+  border-radius: $border-radius;
+  margin-bottom: 1rem;
 
-  &.active {
-    opacity: 1;
-    visibility: visible;
+  .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  &__content {
-    padding: 2rem;
-    background-color: $body-bg;
-    width: 50%;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $black;
     opacity: 0;
-    transform: translateY(-250px);
-    transition: transform 0.6s ease, opacity 0.6s ease;
-    position: relative;
-
-    @include tablet {
-      width: 80%;
-    }
-
-    &__close {
-      position: absolute;
-      right: 5px;
-      top: 5px;
-      font-size: 1.5rem;
-      cursor: pointer;
-
-      &:hover {
-        color: $main-color;
-      }
-    }
+    transition: opacity 0.3s ease;
+    border-radius: $border-radius;
   }
 
-  &.active &__content {
-    opacity: 1;
-    transform: translateY(0);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover:before {
+      opacity: 0.8;
+    }
+
+    &:hover .btn {
+      transform: translate(-50%, -50%) scale(1);
+    }
   }
 }
