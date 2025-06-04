@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-
+import "swiper/swiper-bundle.css";
 import SwiperCore, { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
+
 
 import Button, { OutlineButton } from "./../button/Button";
 import Modal, { ModalContent } from "./../modal/Modal";
