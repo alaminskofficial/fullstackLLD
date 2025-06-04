@@ -20,16 +20,17 @@ export async function fetchMovieBySearch(query) {
     return data
 }
 
-export async function getMoviesByFilter(filter) {
-    const { data } = await tmdbAPI.get(`/movie/${filter}`)
+export async function getMoviesByFilter(filter, page = 1) {
+    const { data } = await tmdbAPI.get(`/movie/${filter}?page=${page}`)
     return data
 }
 
 export async function getMovies({
     filter,
-    query
+    query,
+    page
 }) {
-    if (query) return await fetchMovieBySearch(query)
-    if (filter) return await getMoviesByFilter(filter)
+    if (query) return await fetchMovieBySearch(query, page)
+    if (filter) return await getMoviesByFilter(filter, page)
     return fetchPopularMovies()
 }
