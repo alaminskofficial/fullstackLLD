@@ -1,4 +1,4 @@
-import "swiper/swiper.min.css";
+import 'swiper/css';
 import "boxicons/css/boxicons.min.css";
 import "./App.scss";
 

@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-
-import SwiperCore, { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+
+import 'swiper/css';
+import 'swiper/css/autoplay';
 
 import Button, { OutlineButton } from "./../button/Button";
 import Modal, { ModalContent } from "./../modal/Modal";
@@ -11,11 +13,11 @@ import apiConfig from "./../../api/apiConfig";
 
 import "./hero-slide.scss";
 import { useHistory } from "react-router";
-
 import * as Config from "./../../constants/Config";
 
+
 const HeroSlide = () => {
-  SwiperCore.use([Autoplay]);
+  // SwiperCore.use([Autoplay]);
 
   const [movieItems, setMovieItems] = useState([]);
 
