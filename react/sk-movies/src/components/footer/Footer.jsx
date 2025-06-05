@@ -37,6 +37,9 @@ const Footer = () => {
             <Link to={`/${Config.HOME_PAGE}`}>You must watch</Link>
             <Link to={`/${Config.HOME_PAGE}`}>Recent release</Link>
             <Link to={`/${Config.HOME_PAGE}`}>Top IMDB</Link>
+            <div className="footer__content__branding">
+              <span>Copyright © 2025 skMovies Powered by Sk Alamin </span>
+           </div>
           </div>
         </div>
       </div>

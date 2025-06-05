@@ -37,5 +37,14 @@
         margin-top: 1rem;
       }
     }
+    &__branding {
+      @include flex(center, center);
+      margin-top: 90px; 
+      text-align: center; 
+      font-size: 1.2rem; 
+      font-weight: 500; 
+      color: #fff; 
+      opacity: 0.93; 
+    }
   }
 }
