@@ -58,6 +58,12 @@ const Detail = () => {
                     </span>
                   ))}
               </div>
+              <div className="release-date">
+                <strong>Release Date:</strong> {item.release_date || "N/A"}
+              </div>
+              <div className="vote-info">
+                <strong>Ratings:</strong> {item.vote_count || "N/A"} ({item.vote_average || "N/A"} / 10)
+              </div>
               <p className="overview">{item.overview}</p>
               <div className="cast">
                 <div className="section__header">
