@@ -10,7 +10,7 @@ import tmdbApi, { category, movieType, tvType } from "../../api/tmdbApi";
 import Button, { OutlineButton } from "../button/Button";
 import Input from "../input/Input";
 
-import * as Config from "./../../constants/Config";
+import * as Config from "../../constants/config";
 
 const MovieGrid = (props) => {
   const [items, setItems] = useState([]);

@@ -5,7 +5,7 @@ import "./header.scss";
 
 import logo from "./../../assets/logo.png";
 
-import * as Config from "./../../constants/Config";
+import * as Config from "../../constants/config";
 
 const headerNav = [
   {

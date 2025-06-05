@@ -7,7 +7,7 @@ import MovieList from "../components/movie-list/MovieList";
 
 import { category, movieType, tvType } from "../api/tmdbApi";
 
-import * as Config from "./../constants/Config";
+import * as Config from "../constants/config";
 
 const Home = () => {
   return (

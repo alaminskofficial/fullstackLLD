@@ -5,7 +5,7 @@ import Home from "../pages/Home";
 import Catalog from "../pages/Catalog";
 import Detail from "../pages/detail/Detail";
 
-import * as Config from "../constants/Config";
+import * as Config from "../constants/config";
 
 const Routes = () => {
   return (

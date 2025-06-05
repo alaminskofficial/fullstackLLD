@@ -8,7 +8,7 @@ import Button from "../button/Button";
 
 import { category } from "../../api/tmdbApi";
 import apiConfig from "../../api/apiConfig";
-import * as Config from "./../../constants/Config";
+import * as Config from "../../constants/config";
 
 const MovieCard = (props) => {
   const item = props.item;

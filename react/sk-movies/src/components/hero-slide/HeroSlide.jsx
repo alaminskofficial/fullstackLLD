@@ -13,7 +13,7 @@ import apiConfig from "./../../api/apiConfig";
 
 import "./hero-slide.scss";
 import { useHistory } from "react-router";
-import * as Config from "./../../constants/Config";
+import * as Config from "../../constants/config";
 
 
 const HeroSlide = () => {
