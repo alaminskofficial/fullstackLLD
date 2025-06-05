@@ -62,7 +62,13 @@ const Detail = () => {
                 <strong>Release Date:</strong> {item.release_date || "N/A"}
               </div>
               <div className="vote-info">
-                <strong>Ratings:</strong> {item.vote_count || "N/A"} ({item.vote_average || "N/A"} / 10)
+              <strong>User Score: </strong> 
+              <span className="score">
+                {item.vote_average ? `${(item.vote_average * 10).toFixed(0)}% ` : "N/A"} 
+              </span>
+              <span className="vote-count">
+                ( {item.vote_count || "N/A"} votes)
+              </span>
               </div>
               <p className="overview">{item.overview}</p>
               <div className="cast">

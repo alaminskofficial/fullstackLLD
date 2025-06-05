@@ -120,3 +120,21 @@
     margin-bottom: 1.5rem;
   }
 }
+
+.vote-info {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+
+  .score {
+    font-weight: bold;
+    color: #4caf50; // Green color for positive feedback
+    margin-left: 5px;
+  }
+
+  .vote-count {
+    font-size: 1rem;
+    color: #777;
+    margin-left: 10px;
+  }
+}
