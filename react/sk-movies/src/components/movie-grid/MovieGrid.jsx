@@ -107,6 +107,7 @@ const MovieSearch = (props) => {
       history.push(
         `/${Config.HOME_PAGE}/${category[props.category]}/search/${keyword}`
       );
+      setKeyword("");
     }
   }, [keyword, props.category, history]);
 
