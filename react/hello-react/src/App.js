@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
+import CustomHookUsecase from './CustomHookUseCase'
 
 import Navbar from './Nav';
 import Counter from './Counter' // Import the new Counter component
@@ -14,6 +15,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello World ! Alamin</p>
+        <CustomHookUsecase/>
         <div className="card">
         {/* passing props to child component */}
         <Counter count={count} setCount={setCount} /> 
