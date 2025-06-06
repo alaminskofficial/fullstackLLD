@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
 
 import tmdbApi from "./../../api/tmdbApi";
 import apiConfig from "../../api/apiConfig";
@@ -62,13 +64,28 @@ const Detail = () => {
                 <strong>Release Date:</strong> {item.release_date || "N/A"}
               </div>
               <div className="vote-info">
-              <strong>User Score: </strong> 
-              <span className="score">
-                {item.vote_average ? `${(item.vote_average * 10).toFixed(0)}% ` : "N/A"} 
-              </span>
-              <span className="vote-count">
-                ( {item.vote_count || "N/A"} votes)
-              </span>
+                <strong>User Score:</strong>
+                <div className="circular-progress">
+                  <CircularProgressbar
+                    value={item.vote_average ? item.vote_average * 10 : 0}
+                    text={`${
+                      item.vote_average
+                        ? (item.vote_average * 10).toFixed(0)
+                        : "N/A"
+                    }%`}
+                    styles={buildStyles({
+                      textSize: "30px",
+                      pathColor: `rgba(76, 375, 90, ${
+                        item.vote_average / 10
+                      })`,
+                      textColor: "#8a7979",
+                      trailColor: "#d6d6d6",
+                    })}
+                  />
+                </div>
+                <p className="vote-count" style={{ margin: 0 }}>
+                  ({item.vote_count || "N/A"} votes)
+                </p>
               </div>
               <p className="overview">{item.overview}</p>
               <div className="cast">
