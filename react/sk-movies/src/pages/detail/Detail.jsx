@@ -74,7 +74,7 @@ const Detail = () => {
                         : "N/A"
                     }%`}
                     styles={buildStyles({
-                      textSize: "30px",
+                      textSize: "1.5rem",
                       pathColor: `rgba(76, 375, 90, ${
                         item.vote_average / 10
                       })`,
