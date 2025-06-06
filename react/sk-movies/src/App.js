@@ -12,10 +12,10 @@ import Routes from "./routes/Routes";
 function App() {
   return (
     <BrowserRouter>
-      <Route
-        render={(props) => (
+      <Route render={(props) => (
           <>
-            <Header {...props} />
+           {/* Pass route props to Header */}
+            <Header {...props} /> 
 
             <Routes />
 

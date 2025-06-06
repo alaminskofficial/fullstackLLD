@@ -25,6 +25,7 @@ const headerNav = [
 const Header = () => {
   const { pathname } = useLocation();
   const headerRef = useRef(null);
+  console.log("here is path name " , pathname) // getting from useLocation hook which is passed from Routes props
 
   const active = headerNav.findIndex((e) => e.path === pathname);
 
