@@ -120,15 +120,21 @@
     margin-bottom: 1.5rem;
   }
 }
+.release-date {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #514848;
+  font-weight: bold;
+}
 
 .vote-info {
   margin-top: 10px;
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 1rem;
+  color: #514848;
 
   .score {
     font-weight: bold;
-    color: #4caf50; // Green color for positive feedback
+    color: #4caf50;
     margin-left: 5px;
   }
 
