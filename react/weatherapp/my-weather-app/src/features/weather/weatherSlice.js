@@ -43,6 +43,9 @@ const weatherSlice = createSlice({
         state.status = 'succeeded';
         state.data = action.payload;
       })
+      .addCase(fetchWeatherByCoords.pending, (state, action) => {
+        state.status = 'loading';
+      })
       .addCase(fetchWeatherByCoords.fulfilled, (state, action) => {
         state.status = 'succeeded';
         state.data = action.payload;
