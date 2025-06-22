@@ -25,7 +25,8 @@ export default function WeatherWidget() {
     try {
       const loc = await getCurrentUserLocationData();
       dispatch(fetchWeatherByCoords(loc));
-      dispatch(fetchWeatherWithForecast(loc));
+      const coordinates = `${loc.latitude},${loc.longitude}`;
+      dispatch(fetchWeatherWithForecast(coordinates));
     } catch {
       alert("Failed to get location");
     }

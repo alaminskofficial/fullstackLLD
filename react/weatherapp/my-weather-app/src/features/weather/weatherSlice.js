@@ -7,23 +7,17 @@ import {
 
 export const fetchWeatherByCity = createAsyncThunk(
   'weather/fetchByCity',
-  async (city) => {
-    const res = await getWeatherDataByCity(city);
-    return res;
-  }
+  async (city) => await getWeatherDataByCity(city)
 );
 
 export const fetchWeatherByCoords = createAsyncThunk(
   'weather/fetchByCoords',
-  async ({ latitude, longitude }) => {
-    const res = await getWeatherDataByLatLong(latitude, longitude);
-    return res;
-  }
+  async ({ latitude, longitude }) => await getWeatherDataByLatLong(latitude, longitude)
 );
 
 export const fetchWeatherWithForecast = createAsyncThunk(
     'weather/fetchWithForecast',
-    async (payload) => await getWeatherWithForecast(payload.lat, payload.lonOrCity)
+    async (payload) => await getWeatherWithForecast(payload)
   );
 
 const weatherSlice = createSlice({
@@ -43,7 +37,7 @@ const weatherSlice = createSlice({
         state.status = 'succeeded';
         state.data = action.payload;
       })
-      .addCase(fetchWeatherByCoords.pending, (state, action) => {
+      .addCase(fetchWeatherByCoords.pending, (state) => {
         state.status = 'loading';
       })
       .addCase(fetchWeatherByCoords.fulfilled, (state, action) => {
