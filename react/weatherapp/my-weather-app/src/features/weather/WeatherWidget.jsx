@@ -343,6 +343,14 @@ export default function WeatherWidget() {
           )}
         </>
       )}
+      {/* Footer */}
+      <Box
+        textAlign="center"
+        mt={4}
+        p={2}
+      >
+        <Typography variant="body2">Powered by SK Alamin</Typography>
+      </Box>
     </Box>
   );
 }
