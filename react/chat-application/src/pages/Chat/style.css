@@ -1,0 +1,63 @@
+.messages {
+  padding: 20px;
+  height: 70vh;
+  overflow-y: auto;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.messages div {
+  border: 1px solid #e0e0e0;
+  background-color: white;
+  margin: 8px 0;
+  color: #333;
+  padding: 12px 16px;
+  border-radius: 12px;
+  max-width: 70%;
+  clear: both;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.messages .avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+
+
+.messages .my-message {
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  float: right;
+}
+
+.messages .my-message .ant-avatar {
+  border: 2px solid white;
+}
+
+.message-time {
+  font-size: 0.75rem;
+  color: #666;
+  margin-left: 8px;
+  align-self: flex-end;
+}
+
+.input-area {
+  padding: 16px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 16px;
+}
